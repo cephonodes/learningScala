@@ -54,5 +54,17 @@ object StringDemoA {
         $you
         $""".stripMargin('$')   // 任意の区切り文字を指定することもできる
     println(multiLineStringC)
+
+    // 文字列の補間（String interpolation）
+    var name = "Modi"
+    println("Hello " + name + ", How are you?")
+    println(s"Hello ${name}, How are you?")   // JavaScriptでいうテンプレートリテラルのようなことができる
+
+    name = "PM Modi"
+    var salary = 20000.2
+    println(f"Name is $name%s and salary is $salary%8.2f and designation is PM")  // printfみたいに書ける
+
+    println(s"Hello World!\nHow are you?")
+    println(raw"Hello World!\nHow are you?")  // rawを付けると、\nは改行ではなく\nという文字列として扱われる。
   }
 }
